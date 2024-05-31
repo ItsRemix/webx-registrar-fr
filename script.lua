@@ -21,12 +21,12 @@ coroutine.wrap(function()
 
 	local tld_list = table.concat(res, ", ")
 	get("tlds").set_content("Available TLDs: " .. tld_list)
-    local tldHtml = ""
-    for i in tld_list do
-        tldHtml = tldHtml.."<option value=\""..i.."\">."..i.."</option>"
-    end
-    get("tlds-select").set_content(tldHtml)
-    get("tld-selected").set_content("Selected TLD: " .. get("tlds-select").get_content())
+    -- local tldHtml = ""
+    -- for i in tld_list do
+    --     tldHtml = tldHtml.."<option value=\""..i.."\">."..i.."</option>"
+    -- end
+    -- get("tlds-select").set_content(tldHtml)
+    -- get("tld-selected").set_content("Selected TLD: " .. get("tlds-select").get_content())
 end)()
 
 publish_done.on_click(function()
