@@ -26,12 +26,13 @@ coroutine.wrap(function()
         tldHtml = tldHtml.."<option value=\""..i.."\">."..i.."</option>"
     end
     get("tlds-select").set_content(tldHtml)
+    get("tld-selected").set_content("Selected TLD: " .. get("tlds-select").get_content())
 end)()
 
 publish_done.on_click(function()
 	local body = "{"
 		.. '"tld": "'
-		.. publish_tld.get_content()
+		.. get("tlds-select").get_content()
 		.. '", '
 		.. '"name": "'
 		.. publish_domain.get_content()
