@@ -1,5 +1,5 @@
 local publish_domain = get("publish-input-domain")
-local publish_tld = get("publish-input-tld")
+-- local publish_tld = get("publish-input-tld")
 local publish_ip = get("publish-input-ip")
 local publish_done = get("done-1")
 
