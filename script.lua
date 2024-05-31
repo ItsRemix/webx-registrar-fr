@@ -21,6 +21,11 @@ coroutine.wrap(function()
 
 	local tld_list = table.concat(res, ", ")
 	get("tlds").set_content("Available TLDs: " .. tld_list)
+    local tldHtml = ""
+    for i in tld_list do
+        tldHtml = tldHtml.."<option value=\""..i.."\">."..i.."</option>"
+    end
+    get("tlds-select").set_content(tldHtml)
 end)()
 
 publish_done.on_click(function()
